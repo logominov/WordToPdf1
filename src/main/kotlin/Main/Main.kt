@@ -6,33 +6,33 @@ import java.util.*
 
 fun main() {
 
-    val docxService = DocxService()
+//    val docxService = DocxService()
     val docxConverterService = DocxConverterService()
-    val date = Date().toString()
-    val quantityToken = 0
-    val fullname = "Ivanov Ivan"
-    val asset = Asset()
-    val docName = "test"
-
-
-    val generatedDocument = docxService.generateTemplate(
-        mapOf(
-            "Dateofpurchase" to date,
-            "NbofShares" to quantityToken.toString(),
-            "Nameoftheinvestor" to fullname,
-            "NameoftheAssetManager" to asset.managerHolder,
-            "Nameoftheasset" to asset.assetProperties.assetName,
-            "Company" to asset.sharingProperty.company
-        ),
-        mapOf(
-            "Nameoftheinvestor" to fullname,
-            "Dateofpurchase" to date,
-            "Company" to asset.sharingProperty.company,
-            "NameoftheAssetManager" to asset.managerHolder
-        ),
-        "SPA Template-converted.docx",
-        docName
-    )
+//    val date = Date().toString()
+//    val quantityToken = 0
+//    val fullname = "Ivanov Ivan"
+//    val asset = Asset()
+//    val docName = "test"
+//
+//
+//    val generatedDocument = docxService.generateTemplate(
+//        mapOf(
+//            "Dateofpurchase" to date,
+//            "NbofShares" to quantityToken.toString(),
+//            "Nameoftheinvestor" to fullname,
+//            "NameoftheAssetManager" to asset.managerHolder,
+//            "Nameoftheasset" to asset.assetProperties.assetName,
+//            "Company" to asset.sharingProperty.company
+//        ),
+//        mapOf(
+//            "Nameoftheinvestor" to fullname,
+//            "Dateofpurchase" to date,
+//            "Company" to asset.sharingProperty.company,
+//            "NameoftheAssetManager" to asset.managerHolder
+//        ),
+//        "SPA Template-converted.docx",
+//        docName
+//    )
     docxConverterService.convertToPDF("D:\\Users\\Viktor VoC\\WordToPdf\\WordToPdf1\\build\\resources\\main\\tempDirectory\\test.docx", "D:\\Users\\Viktor VoC\\WordToPdf\\WordToPdf1\\build\\resources\\main\\tempDirectory\\test.pdf")
 }
 
